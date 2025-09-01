@@ -1,0 +1,1283 @@
+/* Tech Sathi - Complete CSS Styles */
+
+/* Custom CSS Variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --accent: #2563eb;
+    --border-light: #e2e8f0;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Text Contrast - Always Readable */
+.theme-light {
+    --text-primary: #000000 !important;
+    --text-secondary: #1e293b !important;
+    --text-tertiary: #475569 !important;
+    --bg-primary: #ffffff !important;
+    --bg-secondary: #f8fafc !important;
+    --border-primary: #e2e8f0 !important;
+}
+
+.theme-dark {
+    --text-primary: #ffffff !important;
+    --text-secondary: #f1f5f9 !important;
+    --text-tertiary: #e2e8f0 !important;
+    --bg-primary: #111827 !important;
+    --bg-secondary: #1f2937 !important;
+    --border-primary: #374151 !important;
+}
+
+.theme-futuristic {
+    --text-primary: #00ff88 !important;
+    --text-secondary: #00ffaa !important;
+    --text-tertiary: #00ffcc !important;
+    --bg-primary: #000000 !important;
+    --bg-secondary: #0a0a0a !important;
+    --border-primary: #00ff88 !important;
+}
+
+.theme-neon {
+    --text-primary: #ffffff !important;
+    --text-secondary: #f0f0f0 !important;
+    --text-tertiary: #e0e0e0 !important;
+    --bg-primary: #000000 !important;
+    --bg-secondary: #0a0a0a !important;
+    --border-primary: #ff00ff !important;
+}
+
+/* Force text colors to use CSS variables */
+.theme-light * {
+    color: var(--text-primary) !important;
+}
+
+.theme-dark * {
+    color: var(--text-primary) !important;
+}
+
+.theme-futuristic * {
+    color: var(--text-primary) !important;
+}
+
+.theme-neon * {
+    color: var(--text-primary) !important;
+}
+
+/* Apply background and border colors */
+.theme-light header,
+.theme-light #sidebar,
+.theme-light .bg-white\/95,
+.theme-light .bg-gray-50\/50 {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+}
+
+.theme-dark header,
+.theme-dark #sidebar,
+.theme-dark .bg-gray-900\/95,
+.theme-dark .bg-gray-800\/50 {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+}
+
+.theme-futuristic header,
+.theme-futuristic #sidebar,
+.theme-futuristic .bg-black\/95,
+.theme-futuristic .bg-gray-900\/50 {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+}
+
+.theme-neon header,
+.theme-neon #sidebar,
+.theme-neon .bg-black\/95,
+.theme-neon .bg-gray-900\/50 {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+}
+
+/* Specific text color overrides for better readability */
+.theme-light h1, .theme-light h2, .theme-light h3, .theme-light h4, .theme-light h5, .theme-light h6,
+.theme-light p, .theme-light span, .theme-light div, .theme-light button {
+    color: #000000 !important;
+}
+
+.theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5, .theme-dark h6,
+.theme-dark p, .theme-dark span, .theme-dark div, .theme-dark button {
+    color: #ffffff !important;
+}
+
+.theme-futuristic h1, .theme-futuristic h2, .theme-futuristic h3, .theme-futuristic h4, .theme-futuristic h5, .theme-futuristic h6,
+.theme-futuristic p, .theme-futuristic span, .theme-futuristic div, .theme-futuristic button {
+    color: #00ff88 !important;
+}
+
+.theme-neon h1, .theme-neon h2, .theme-neon h3, .theme-neon h4, .theme-neon h5, .theme-neon h6,
+.theme-neon p, .theme-neon span, .theme-neon div, .theme-neon button {
+    color: #ffffff !important;
+}
+
+
+
+.theme-dark {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --accent: #60a5fa;
+    --border-light: #334155;
+    --shadow-light: rgba(0, 0, 0, 0.3);
+    --shadow-medium: rgba(0, 0, 0, 0.5);
+}
+
+.theme-futuristic {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --text-primary: #00ff88;
+    --text-secondary: #00cc6a;
+    --accent: #00ff88;
+    --border-light: #00ff88;
+    --shadow-light: rgba(0, 255, 136, 0.2);
+    --shadow-medium: rgba(0, 255, 136, 0.4);
+}
+
+.theme-neon {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --text-primary: #ff00ff;
+    --text-secondary: #ff66ff;
+    --accent: #ff00ff;
+    --border-light: #ff00ff;
+    --shadow-light: rgba(255, 0, 255, 0.2);
+    --shadow-medium: rgba(255, 0, 255, 0.4);
+}
+
+/* Enhanced Glassmorphism Effects */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Button Styles */
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+}
+
+/* Futuristic Theme Hacker Animations */
+.theme-futuristic::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: 
+        linear-gradient(90deg, transparent 98%, #00ff88 100%),
+        linear-gradient(180deg, transparent 98%, #00ff88 100%);
+    background-size: 50px 50px;
+    animation: matrix-scan 20s linear infinite;
+}
+
+.theme-futuristic::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
+    animation: hacker-glow 8s ease-in-out infinite alternate;
+}
+
+@keyframes matrix-scan {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+@keyframes hacker-glow {
+    0% {
+        opacity: 0.3;
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1) rotate(180deg);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+/* Futuristic Theme Matrix Rain Effect */
+.theme-futuristic .matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.theme-futuristic .matrix-rain::before {
+    content: '01';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 14px;
+    text-shadow: 0 0 5px #00ff88;
+    animation: matrix-rain-fall 3s linear infinite;
+}
+
+@keyframes matrix-rain-fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Matrix Drop Animation */
+@keyframes matrix-drop {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Futuristic Theme Elements */
+.theme-futuristic .glassmorphism {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.2);
+}
+
+.theme-futuristic .btn-primary {
+    background: linear-gradient(135deg, #00ff88, #00ffaa);
+    color: #000;
+    border: 1px solid #00ff88;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.theme-futuristic .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.8);
+    transform: translateY(-3px);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Enhanced Input Styles */
+.input-enhanced {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    will-change: border-color, box-shadow;
+}
+
+.input-enhanced:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+/* Force readable text colors for all themes */
+.theme-light .text-gray-600,
+.theme-light .text-gray-700,
+.theme-light .text-gray-800,
+.theme-light .text-gray-900 {
+    color: #000000 !important;
+}
+
+.theme-light .text-gray-400,
+.theme-light .text-gray-500 {
+    color: #1e293b !important;
+}
+
+.theme-dark .text-gray-600,
+.theme-dark .text-gray-700,
+.theme-dark .text-gray-800,
+.theme-dark .text-gray-900 {
+    color: #ffffff !important;
+}
+
+.theme-dark .text-gray-400,
+.theme-dark .text-gray-500 {
+    color: #f1f5f9 !important;
+}
+
+.theme-futuristic .text-gray-600,
+.theme-futuristic .text-gray-700,
+.theme-futuristic .text-gray-800,
+.theme-futuristic .text-gray-900,
+.theme-futuristic .text-gray-400,
+.theme-futuristic .text-gray-500 {
+    color: #00ff88 !important;
+}
+
+.theme-neon .text-gray-600,
+.theme-neon .text-gray-700,
+.theme-neon .text-gray-800,
+.theme-neon .text-gray-900,
+.theme-neon .text-gray-400,
+.theme-neon .text-gray-500 {
+    color: #ffffff !important;
+}
+
+/* Ensure buttons and interactive elements are always readable */
+.theme-light button:not([class*="bg-"]) {
+    color: #000000 !important;
+}
+
+.theme-dark button:not([class*="bg-"]) {
+    color: #ffffff !important;
+}
+
+.theme-futuristic button:not([class*="bg-"]) {
+    color: #00ff88 !important;
+}
+
+.theme-neon button:not([class*="bg-"]) {
+    color: #ffffff !important;
+}
+
+/* Force readable text for specific problematic elements */
+.theme-light .text-gray-500,
+.theme-light .text-gray-400,
+.theme-light .text-gray-300 {
+    color: #000000 !important;
+}
+
+.theme-dark .text-gray-500,
+.theme-dark .text-gray-400,
+.theme-dark .text-gray-300 {
+    color: #ffffff !important;
+}
+
+.theme-futuristic .text-gray-500,
+.theme-futuristic .text-gray-400,
+.theme-futuristic .text-gray-300 {
+    color: #00ff88 !important;
+}
+
+.theme-neon .text-gray-500,
+.theme-neon .text-gray-400,
+.theme-neon .text-gray-300 {
+    color: #ffffff !important;
+}
+
+/* Override any Tailwind text colors that might be interfering */
+.theme-light [class*="text-gray-"] {
+    color: #000000 !important;
+}
+
+.theme-dark [class*="text-gray-"] {
+    color: #ffffff !important;
+}
+
+.theme-futuristic [class*="text-gray-"] {
+    color: #00ff88 !important;
+}
+
+.theme-neon [class*="text-gray-"] {
+    color: #ffffff !important;
+}
+
+/* Additional force overrides for maximum readability */
+.theme-light * {
+    color: #000000 !important;
+}
+
+.theme-dark * {
+    color: #ffffff !important;
+}
+
+.theme-futuristic * {
+    color: #00ff88 !important;
+}
+
+.theme-neon * {
+    color: #ffffff !important;
+}
+
+/* Exclude elements that should keep their colors (like buttons with backgrounds) */
+.theme-light button[class*="bg-"],
+.theme-light button[class*="gradient-"],
+.theme-light .bg-gradient-,
+.theme-light .text-white,
+.theme-light .text-blue-,
+.theme-light .text-green-,
+.theme-light .text-red-,
+.theme-light .text-yellow- {
+    color: inherit !important;
+}
+
+/* Theme-specific main content styling */
+.theme-light main {
+    background-color: var(--bg-secondary) !important;
+}
+
+.theme-dark main {
+    background-color: var(--bg-secondary) !important;
+}
+
+.theme-futuristic main {
+    background-color: var(--bg-secondary) !important;
+}
+
+.theme-neon main {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Theme-specific input and message styling */
+.theme-light #message-input {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.theme-dark #message-input {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.theme-futuristic #message-input {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.theme-neon #message-input {
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Theme-specific welcome message styling */
+.theme-light #welcome-avatar {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+}
+
+.theme-dark #welcome-avatar {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+}
+
+.theme-futuristic #welcome-avatar {
+    background: linear-gradient(135deg, #00ff88, #00ffaa) !important;
+}
+
+.theme-neon #welcome-avatar {
+    background: linear-gradient(135deg, #ff00ff, #ff66ff) !important;
+}
+
+/* Theme-specific background overrides */
+.theme-light body {
+    background-color: #ffffff !important;
+}
+
+.theme-dark body {
+    background-color: #111827 !important;
+}
+
+.theme-futuristic body {
+    background-color: #000000 !important;
+}
+
+.theme-neon body {
+    background-color: #000000 !important;
+}
+
+/* Force sidebar text to always be white */
+#sidebar,
+#sidebar *,
+#sidebar h3,
+#sidebar h4,
+#sidebar p,
+#sidebar span,
+#sidebar button,
+#sidebar label,
+#sidebar div {
+    color: #ffffff !important;
+}
+
+/* Ensure sidebar has dark background for white text readability */
+#sidebar {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Specific sidebar text elements that must be white */
+#sidebar .text-lg,
+#sidebar .text-sm,
+#sidebar .text-xs,
+#sidebar .font-semibold,
+#sidebar .font-medium {
+    color: #ffffff !important;
+}
+
+/* Sidebar button text that should be white */
+#sidebar button:not([class*="bg-"]) {
+    color: #ffffff !important;
+}
+
+/* Sidebar language and theme buttons text */
+#sidebar .lang-btn,
+#sidebar .theme-btn {
+    color: #ffffff !important;
+}
+
+/* Sidebar creator description text */
+#sidebar .creator-description,
+#sidebar p {
+    color: #ffffff !important;
+}
+
+/* Override any conflicting text colors in sidebar */
+#sidebar [class*="text-gray-"] {
+    color: #ffffff !important;
+}
+
+#sidebar [class*="text-black"] {
+    color: #ffffff !important;
+}
+
+#sidebar [class*="text-blue-"]:not([class*="bg-"]) {
+    color: #ffffff !important;
+}
+
+#sidebar [class*="text-green-"]:not([class*="bg-"]) {
+    color: #ffffff !important;
+}
+
+/* Ensure all sidebar text is white with high specificity */
+body #sidebar *,
+body #sidebar h3,
+body #sidebar h4,
+body #sidebar p,
+body #sidebar span,
+body #sidebar div,
+body #sidebar button,
+body #sidebar label {
+    color: #ffffff !important;
+}
+
+.theme-dark button[class*="bg-"],
+.theme-dark button[class*="gradient-"],
+.theme-dark .bg-gradient-,
+.theme-dark .text-white,
+.theme-dark .text-blue-,
+.theme-dark .text-green-,
+.theme-dark .text-red-,
+.theme-dark .text-yellow- {
+    color: inherit !important;
+}
+
+.theme-futuristic button[class*="bg-"],
+.theme-futuristic button[class*="gradient-"],
+.theme-futuristic .bg-gradient-,
+.theme-futuristic .text-white,
+.theme-futuristic .text-blue-,
+.theme-futuristic .text-green-,
+.theme-futuristic .text-red-,
+.theme-futuristic .text-yellow- {
+    color: inherit !important;
+}
+
+.theme-neon button[class*="bg-"],
+.theme-neon button[class*="gradient-"],
+.theme-neon .bg-gradient-,
+.theme-neon .text-white,
+.theme-neon .text-blue-,
+.theme-neon .text-green-,
+.theme-neon .text-red-,
+.theme-neon .text-yellow- {
+    color: inherit !important;
+}
+
+/* Enhanced Neon Glow Effects */
+.neon-glow {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+}
+
+.neon-glow:hover {
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.9);
+}
+
+/* Typing Animation */
+.typing-animation {
+    animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+    border-right: 3px solid transparent;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ffffff }
+}
+
+/* Loading Dots Animation */
+.loading-dots {
+    animation: loading 1.5s infinite;
+}
+
+/* Loading Screen Transitions */
+#loading-screen {
+    transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+}
+
+#app {
+    transition: opacity 0.5s ease-in;
+}
+
+#app.fade-in {
+    opacity: 1;
+}
+
+@keyframes loading {
+    0%, 80%, 100% { 
+        opacity: 0; 
+        transform: scale(0.8);
+    }
+    40% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
+
+/* Heart Animation */
+.heart-animation {
+    animation: heart-beat 2s infinite;
+}
+
+@keyframes heart-beat {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.2); 
+    }
+}
+
+/* AI Avatar Animation */
+#ai-avatar {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    33% { 
+        transform: translateY(-10px) rotate(5deg); 
+    }
+    66% { 
+        transform: translateY(-5px) rotate(-5deg); 
+    }
+}
+
+/* Welcome Avatar Animation */
+#welcome-avatar {
+    animation: welcome-float 8s ease-in-out infinite;
+}
+
+@keyframes welcome-float {
+    0%, 100% { 
+        transform: translateY(0px) scale(1) rotate(0deg); 
+    }
+    25% { 
+        transform: translateY(-15px) scale(1.05) rotate(2deg); 
+    }
+    50% { 
+        transform: translateY(-10px) scale(1.1) rotate(-2deg); 
+    }
+    75% { 
+        transform: translateY(-5px) scale(1.05) rotate(1deg); 
+    }
+}
+
+/* Message Bubble Animations */
+.message-bubble {
+    animation: message-slide-in 0.4s ease-out;
+}
+
+@keyframes message-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Button Hover Effects */
+.btn-hover {
+    transition: all 0.2s ease;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Sidebar Animation */
+#sidebar {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.sidebar-open {
+    transform: translateX(0) !important;
+}
+
+/* Theme Transition */
+body {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: background-color, color;
+    transform: translateZ(0);
+}
+
+/* Enhanced Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.6);
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(59, 130, 246, 0.8);
+}
+
+/* Enhanced Focus States */
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 1024px) {
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: 50;
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 40;
+        backdrop-filter: blur(4px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-buttons {
+        gap: 0.5rem;
+    }
+    
+    .header-buttons button {
+        padding: 0.5rem;
+    }
+    
+    .header-buttons button span {
+        display: none;
+    }
+    
+    #welcome-avatar {
+        width: 24rem;
+        height: 24rem;
+    }
+    
+    .max-w-md {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome-avatar {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .text-3xl {
+        font-size: 1.5rem;
+    }
+    
+    .text-lg {
+        font-size: 1rem;
+    }
+}
+
+/* Enhanced Dark Mode */
+.dark .glassmorphism {
+    background: rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark .neon-glow {
+    box-shadow: 0 0 25px rgba(96, 165, 250, 0.6);
+}
+
+/* Enhanced Futuristic Theme */
+.theme-futuristic {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+}
+
+.theme-futuristic .glassmorphism {
+    background: rgba(0, 255, 136, 0.15);
+    border-color: rgba(0, 255, 136, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.2);
+}
+
+.theme-futuristic .neon-glow {
+    box-shadow: 0 0 25px rgba(0, 255, 136, 0.6);
+}
+
+/* Enhanced Neon Theme */
+.theme-neon {
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+}
+
+.theme-neon .glassmorphism {
+    background: rgba(255, 0, 255, 0.15);
+    border-color: rgba(255, 0, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(255, 0, 255, 0.2);
+}
+
+.theme-neon .neon-glow {
+    box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+/* Enhanced Loading Screen */
+#loading-screen {
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #ec4899 100%);
+    background-size: 400% 400%;
+    animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Enhanced Button States */
+.btn-active {
+    background: var(--accent) !important;
+    color: white !important;
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.btn-inactive {
+    background: rgba(156, 163, 175, 0.2) !important;
+    color: rgba(75, 85, 99, 0.8) !important;
+}
+
+/* Enhanced Voice Toggle */
+#voice-toggle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#voice-toggle.active {
+    background: #10b981;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#voice-toggle.active div {
+    transform: translateX(1.5rem);
+}
+
+/* Enhanced Language Button States */
+.lang-btn.active {
+    background: #3b82f6 !important;
+    color: white !important;
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.lang-btn:not(.active) {
+    background: rgba(156, 163, 175, 0.15) !important;
+    color: rgba(75, 85, 99, 0.8) !important;
+    border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.lang-btn:hover:not(.active) {
+    background: rgba(156, 163, 175, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+/* Enhanced Theme Button States */
+.theme-btn.active {
+    background: #3b82f6 !important;
+    color: white !important;
+    transform: scale(0.95);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.theme-btn:not(.active) {
+    background: rgba(156, 163, 175, 0.15) !important;
+    color: rgba(75, 85, 99, 0.8) !important;
+    border: 1px solid rgba(156, 163, 175, 0.3);
+}
+
+.theme-btn:hover:not(.active) {
+    background: rgba(156, 163, 175, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+/* Enhanced Input Focus States */
+#message-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    transform: translateY(-1px);
+}
+
+/* Enhanced Message Input */
+#message-input {
+    min-height: 60px;
+    max-height: 200px;
+    resize: none;
+    overflow-y: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Smooth Transitions */
+* {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Shadows */
+.enhanced-shadow {
+    box-shadow: 
+        0 4px 6px -1px var(--shadow-light),
+        0 2px 4px -1px var(--shadow-light),
+        0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.enhanced-shadow:hover {
+    box-shadow: 
+        0 10px 15px -3px var(--shadow-medium),
+        0 4px 6px -2px var(--shadow-light),
+        0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* Enhanced Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile App Enhancements */
+.mobile-mode {
+    --sidebar-width: 100%;
+}
+
+/* Enhanced Message Bubbles */
+.message-bubble {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.message-bubble .bg-blue-500 {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.message-bubble .bg-white\/80 {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .message-bubble .bg-gray-800\/80 {
+    background: rgba(31, 41, 55, 0.95) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(55, 65, 81, 0.8);
+}
+
+/* Enhanced Header */
+header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+/* Enhanced Sidebar */
+#sidebar {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+/* Enhanced Input Area */
+#message-input {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Enhanced Buttons */
+button {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .glassmorphism {
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid #000000;
+    }
+    
+    .dark .glassmorphism {
+        background: rgba(0, 0, 0, 0.95);
+        border: 2px solid #ffffff;
+    }
+}
+
+/* Print Styles */
+@media print {
+    #loading-screen,
+    #sidebar,
+    #mic-btn,
+    #send-btn,
+    .header-buttons {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Custom Mobile Enhancements */
+@media (max-width: 640px) {
+    .p-4 {
+        padding: 1rem;
+    }
+    
+    .gap-3 {
+        gap: 0.75rem;
+    }
+    
+    .gap-2 {
+        gap: 0.5rem;
+    }
+    
+    .rounded-2xl {
+        border-radius: 1rem;
+    }
+    
+    .text-xl {
+        font-size: 1.125rem;
+    }
+    
+    .text-sm {
+        font-size: 0.875rem;
+    }
+    
+    .text-xs {
+        font-size: 0.75rem;
+    }
+}
+
+/* Enhanced Light Theme Specific Styles */
+.theme-light {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+}
+
+.theme-light .glassmorphism {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.theme-light #sidebar {
+    background: rgba(255, 255, 255, 0.95);
+    border-right: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.theme-light header {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.theme-light #message-input {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.theme-light .bg-white\/95 {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.theme-light .bg-white\/90 {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.theme-light .bg-white\/80 {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Enhanced Dark Theme Specific Styles */
+.theme-dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+.theme-dark .glassmorphism {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Futuristic Theme Specific Styles */
+.theme-futuristic {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+}
+
+.theme-futuristic .glassmorphism {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 255, 136, 0.2);
+}
+
+/* Enhanced Neon Theme Specific Styles */
+.theme-neon {
+    background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+}
+
+.theme-neon .glassmorphism {
+    background: rgba(255, 0, 255, 0.1);
+    border: 1px solid rgba(255, 0, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(255, 0, 255, 0.2);
+}
