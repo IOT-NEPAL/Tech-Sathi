@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen transition-all duration-500">
+    <!-- Matrix Rain Effect for Futuristic Theme -->
+    <div class="matrix-rain" style="display: none;"></div>
     
     <!-- Loading Screen -->
     <div id="loading-screen" class="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-700 to-pink-600">
@@ -22,11 +24,15 @@
             </div>
             <h1 class="text-4xl font-bold mb-4 typing-animation">Tech Sathi</h1>
             <p class="text-xl mb-6 opacity-80">AI Assistant Loading...</p>
-            <div class="flex justify-center space-x-2">
+            <div class="flex justify-center space-x-2 mb-6">
                 <div class="w-3 h-3 bg-white rounded-full loading-dots"></div>
                 <div class="w-3 h-3 bg-white rounded-full loading-dots" style="animation-delay: 0.2s;"></div>
                 <div class="w-3 h-3 bg-white rounded-full loading-dots" style="animation-delay: 0.4s;"></div>
             </div>
+            <!-- Manual escape button in case loading gets stuck -->
+            <button id="skip-loading" class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-sm transition-all duration-300 backdrop-blur-xl">
+                Click here if loading takes too long
+            </button>
         </div>
     </div>
 
